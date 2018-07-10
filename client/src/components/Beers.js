@@ -14,7 +14,7 @@ class Beers extends React.Component {
     return (
       <div>
         <ul>
-          {beers.map(b =>
+          { beers.map( b =>
             <li key={b.id}>
               {b.name}
             </li>
