@@ -10,7 +10,7 @@ class Beers extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://api.brewerydb.com/v2/?key=4a67a4e833fd9ccbd77588fbaa724c33&number=50").then(
+    fetch("http://api.brewerydb.com/v2/?key=4a67a4e833fd9ccbd77588fbaa724c33&results=50").then(
       res => {
         return res.json();
       }).then(data => {
@@ -31,7 +31,7 @@ class Beers extends React.Component {
     return (
       <div>
         <ul>
-          { beers.map( b =>
+          { names.map( b =>
             <li key={b.id}>
               {b.name}
             </li>

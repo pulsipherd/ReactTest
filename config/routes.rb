@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
+    # api token
+    get '/brewery_db_token', to: 'bewery_db#token'
     # Beers
     get 'all_beers', to: 'beers#all'
     get 'beer/:name', to: 'beers#by_name'
